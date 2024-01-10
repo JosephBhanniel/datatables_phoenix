@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="csrf-token" content={csrf_token_value()}>
+    <%= live_title_tag assigns[:page_title] || "Datatables", suffix: " · Phoenix Framework" %>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/css/bootstrap.min.css")}/>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/datatables.min.css")}/>
+  </head>
+  <body>
+    <header>
+     
+    </header>
+    <%= @inner_content %>
+     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/datatables.min.js")}></script>
+      <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/jQuery-3.7.0/jquery-3.7.0.min.js")}></script>
+        <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/js/bootstrap.bundle.js")}></script>
+        <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/script.js")}></script>
+       
+
+  </body>
+</html>
